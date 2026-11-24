@@ -32,7 +32,7 @@ const Experience = () => {
               contentArrowStyle={{
                 borderRight: "7px solid rgba(255, 255, 255, 0.04)",
               }}
-              date={`${experience.dateJoining} - ${experience.dateEnd}`}
+              date={`${experience.dateJoining} – ${experience.dateEnd}`}
               dateClassName="timeline-date"
               iconStyle={
                 experience.isWorkplace
@@ -57,7 +57,29 @@ const Experience = () => {
                 {experience.designation}
               </h2>
               <h4 className="timeline-company">{experience.company}</h4>
-              <p className="timeline-skills">{experience.skills.join(" · ")}</p>
+              {experience.location && (
+                <p className="timeline-location">{experience.location}</p>
+              )}
+
+              {experience.highlights?.length > 0 ? (
+                <ul className="timeline-highlights">
+                  {experience.highlights.map((item) => (
+                    <li key={item.slice(0, 48)}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="timeline-skills">{experience.skills.join(" · ")}</p>
+              )}
+
+              {experience.highlights?.length > 0 && experience.skills?.length > 0 && (
+                <div className="timeline-tags">
+                  {experience.skills.map((tag) => (
+                    <span key={tag} className="timeline-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>

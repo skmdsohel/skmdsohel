@@ -29,11 +29,57 @@
 .timeline-company {
   color: var(--accent-cyan) !important;
   font-weight: 600 !important;
-  margin: 0 0 8px !important;
+  margin: 0 0 4px !important;
+}
+
+.timeline-location {
+  color: var(--text-muted) !important;
+  font-size: 0.85rem !important;
+  margin: 0 0 12px !important;
 }
 
 .timeline-skills {
   color: var(--text-secondary) !important;
   font-size: 0.95rem !important;
   margin: 0 !important;
+}
+
+.timeline-highlights {
+  margin: 0 0 14px;
+  padding-left: 1.15rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.timeline-highlights li {
+  margin-bottom: 0.55rem;
+}
+
+.timeline-highlights li::marker {
+  color: var(--accent);
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.timeline-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #c4b5fd;
+}
+
+@media only screen and (max-width: 1170px) {
+  .vertical-timeline-element-content {
+    margin-left: 0 !important;
+  }
 }
