@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c04b5f60.css",
-    "main.js": "/static/js/main.116d8781.js",
+    "main.css": "/static/css/main.f177a4d8.css",
+    "main.js": "/static/js/main.dda91813.js",
     "static/media/FoodStore.png": "/static/media/FoodStore.b49840d38ba3abdd55db.png",
     "static/media/Portfolio.png": "/static/media/Portfolio.e84fbeaca626f539de5f.png",
     "static/media/time-tracker-app.png": "/static/media/time-tracker-app.fde933b0256f1c298d7f.png",
@@ -9,11 +9,11 @@
     "static/media/hackerrank.png": "/static/media/hackerrank.cd478042a38cb1961c7f.png",
     "static/media/udemy.png": "/static/media/udemy.6d8838d412136566063c.png",
     "index.html": "/index.html",
-    "main.c04b5f60.css.map": "/static/css/main.c04b5f60.css.map",
-    "main.116d8781.js.map": "/static/js/main.116d8781.js.map"
+    "main.f177a4d8.css.map": "/static/css/main.f177a4d8.css.map",
+    "main.dda91813.js.map": "/static/js/main.dda91813.js.map"
   },
   "entrypoints": [
-    "static/css/main.c04b5f60.css",
-    "static/js/main.116d8781.js"
+    "static/css/main.f177a4d8.css",
+    "static/js/main.dda91813.js"
   ]
 }
