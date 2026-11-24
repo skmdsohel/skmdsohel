@@ -1,21 +1,40 @@
 .separator {
-  background-image: linear-gradient(
-     to right top,
-     #3654e7,
-     #5c52e9,
-     #874feb,
-     #914aeb,
-     #a745ea,
-     #7d68fb,
-     #4d7fff,
-     #0091ff,
-     #00acfd,
-     #00bdd9,
-     #00c8a3,
-     #6bcc70
-   );
-   height: 6px;
-   width: 100%;
-   border-radius: 3px;
-   margin: 16px 0px;
+  height: 1px;
+  width: 100%;
+  margin: 32px 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent) 20%,
+    var(--accent-cyan) 50%,
+    var(--accent-secondary) 80%,
+    transparent
+  );
+  opacity: 0.6;
+  position: relative;
+  overflow: hidden;
+}
+
+.separator::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: separator-shine 4s ease-in-out infinite;
+}
+
+@keyframes separator-shine {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
 }

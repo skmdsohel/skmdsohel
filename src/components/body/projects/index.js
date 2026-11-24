@@ -3,18 +3,19 @@ import Separator from "../../common/separator";
 import { ProjectData } from "../../data/projects";
 import ProjectCard from "./project-card";
 import "./projects.css";
+import AnimatedSection from "../../common/AnimatedSection";
+
 function Projects() {
-  const data = ProjectData;
   return (
-    <div className="projects">
+    <AnimatedSection className="projects">
       <Separator />
       <label className="section-title">Projects</label>
-      <div>
-        {data.map((project, index) => {
-          return <ProjectCard key={index} project={project} />;
-        })}
+      <div className="projects-list">
+        {ProjectData.map((project, index) => (
+          <ProjectCard key={project.title} project={project} index={index} />
+        ))}
       </div>
-    </div>
+    </AnimatedSection>
   );
 }
 

@@ -1,56 +1,81 @@
 .work-card {
-  padding: 8px;
-  width: 42%;
-  height: 12em;
-  margin: 1.5em 0;
-  padding: 1.5em;
+  padding: 1.5rem;
+  width: calc(50% - 12px);
+  margin: 0.75em 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) !important;
-  border-radius: .5em;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: none;
+  border-radius: var(--radius-md);
   color: inherit !important;
   text-decoration: none;
+  transition: var(--transition);
+  position: relative;
 }
 
 .work-card:hover {
-    cursor: pointer;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1) !important;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow);
+  background: var(--bg-card-hover);
 }
 
 .work-logo {
-  height: 80px;
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
 }
 
 .work-info {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  flex: 1;
+  text-align: left;
 }
 
-.work-dates {
-  color: black;
+.work-dates label {
+  color: var(--accent-cyan);
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .work-desc {
   text-align: left;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 80%;
+  color: var(--text-secondary);
 }
 
 .company-name {
-  font-size: larger;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.work-card-arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.work-card:hover .work-card-arrow {
+  color: var(--accent-cyan);
+  transform: translate(2px, -2px);
 }
 
 @media only screen and (max-width: 920px) {
   .work-card {
     width: 100%;
-    height: fit-content;
   }
 }

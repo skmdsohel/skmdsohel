@@ -1,17 +1,22 @@
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+
 export const SocialData = [
   {
     platform: "Github",
-    icon: require("../../assets/icons/github.png"),
+    Icon: FaGithub,
     link: "https://github.com/skmdsohel",
+    color: "#f4f4f5",
   },
   {
     platform: "Linkedin",
-    icon: require("../../assets/icons/linkedin.png"),
+    Icon: FaLinkedin,
     link: "https://www.linkedin.com/in/skmdsohel/",
+    color: "#0A66C2",
   },
   {
     platform: "Twitter",
-    icon: require("../../assets/icons/twitter.png"),
+    Icon: FaXTwitter,
     link: "https://twitter.com/mdsohel181",
-  }
+    color: "#f4f4f5",
+  },
 ];

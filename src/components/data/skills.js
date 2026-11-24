@@ -12,7 +12,7 @@ export const SkillsData = [
       },
       {
         name: "Angular",
-        icon: <i className="devicon-angularjs-plain colored"></i>,
+        icon: <i className="devicon-angular-plain colored"></i>,
       },
       {
         name: "HTML5",

@@ -1,4 +1,7 @@
-.body{
-    padding: 12px;
-    padding-bottom: 36px;
+.body {
+  padding: 12px 4px 36px;
+}
+
+section {
+  scroll-margin-top: 88px;
 }

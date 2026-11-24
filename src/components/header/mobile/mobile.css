@@ -1,39 +1,81 @@
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 198;
+}
+
 .mobile {
-    background-color: white;
-    height: 100vh;
-    width: 60vw;
-    position: absolute;
-    right: 0px;
-    top: -6px;
-    padding: 18px 12px;
-    display: flex;
-    flex-direction: column;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border-subtle);
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: min(72vw, 320px);
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 199;
 }
 
 .close-icon {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  font-size: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.close-icon:hover {
+  border-color: var(--border-glow);
+  color: var(--accent-cyan);
 }
 
 .mobile-options {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-top: 24px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 32px;
+  gap: 8px;
 }
 
 .mobile-option {
-    font-size: 24px;
-    margin: 12px 0px;
-    display: flex;
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex;
 }
 
-.mobile-option a{
-    text-decoration: none;
-    color: blue;
-    display: flex;
+.mobile-option a {
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.mobile-option a:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-subtle);
+}
+
+.mobile-option .option-icon {
+  font-size: 1.35rem;
+  color: var(--accent);
 }

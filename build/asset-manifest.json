@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6e47c269.css",
+    "main.js": "/static/js/main.bc6f9c1b.js",
+    "static/media/FoodStore.png": "/static/media/FoodStore.b49840d38ba3abdd55db.png",
+    "static/media/sohel_resume.pdf": "/static/media/sohel_resume.5fe32566a6b807035e5e.pdf",
+    "static/media/Portfolio.png": "/static/media/Portfolio.e84fbeaca626f539de5f.png",
+    "static/media/time-tracker-app.png": "/static/media/time-tracker-app.fde933b0256f1c298d7f.png",
+    "static/media/logoSohel.png": "/static/media/logoSohel.97cf006000aa8476112e.png",
+    "static/media/hackerrank.png": "/static/media/hackerrank.cd478042a38cb1961c7f.png",
+    "static/media/udemy.png": "/static/media/udemy.6d8838d412136566063c.png",
+    "static/media/coding.svg": "/static/media/coding.ef097afbc427c634086d2f1c2ad6032e.svg",
+    "index.html": "/index.html",
+    "main.6e47c269.css.map": "/static/css/main.6e47c269.css.map",
+    "main.bc6f9c1b.js.map": "/static/js/main.bc6f9c1b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e47c269.css",
+    "static/js/main.bc6f9c1b.js"
+  ]
+}

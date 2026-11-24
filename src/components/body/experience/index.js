@@ -7,66 +7,62 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { ExperienceData } from "../../data/experience";
+import AnimatedSection from "../../common/AnimatedSection";
+import { HiBriefcase, HiAcademicCap } from "react-icons/hi2";
 
 const Experience = () => {
+  const items = [...ExperienceData].reverse();
+
   return (
-    <div>
+    <AnimatedSection>
       <Separator />
       <label className="section-title">Experience</label>
       <div className="vertical-line-items">
-        <VerticalTimeline lineColor="#407BFF">
-          {/* reversing enperience data so that in future we can add new experience 
-          in data/experience file sequentially without updating id of all items */}
-          {ExperienceData.reverse().map((experience) => {
-            return (
-              <VerticalTimelineElement
-                key={experience.id}
-                className="vertical-timeline-element--work"
-                // contentStyle={{ background: "#fff", color: "black" }}
-                date={`${experience.dateJoining} - ${experience.dateEnd}`}
-                iconStyle={
-                  experience.isWorkplace === true
-                    ? {
-                        background: "rgb(33, 150, 243)",
-                        color: "#fff",
-                        padding: "auto",
-                      }
-                    : {
-                        background: "rgb(243, 191, 33)",
-                        color: "#fff",
-                        padding: "auto",
-                      }
-                }
-                icon={
-                  <img
-                    width="40"
-                    height="40"
-                    src={
-                      experience.isWorkplace === true
-                        ? "https://img.icons8.com/fluency-systems-regular/48/laptop-coding.png"
-                        : "https://img.icons8.com/fluency-systems-regular/48/motarboard.png"
+        <VerticalTimeline lineColor="rgba(99, 102, 241, 0.4)">
+          {items.map((experience) => (
+            <VerticalTimelineElement
+              key={experience.id}
+              className="vertical-timeline-element--work"
+              contentStyle={{
+                background: "rgba(255, 255, 255, 0.04)",
+                color: "var(--text-primary)",
+                border: "1px solid var(--border-subtle)",
+                boxShadow: "var(--shadow-card)",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid rgba(255, 255, 255, 0.04)",
+              }}
+              date={`${experience.dateJoining} - ${experience.dateEnd}`}
+              dateClassName="timeline-date"
+              iconStyle={
+                experience.isWorkplace
+                  ? {
+                      background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+                      color: "#fff",
                     }
-                    alt={
-                      experience.isWorkplace === true
-                        ? "laptop-coding"
-                        : "motarboard"
+                  : {
+                      background: "linear-gradient(135deg, #f59e0b, #fbbf24)",
+                      color: "#fff",
                     }
-                  />
-                }
-              >
-                <h2 className="vertical-timeline-element-title title">
-                  {experience.designation}
-                </h2>
-                <h4 className="vertical-timeline-element-title">
-                  {experience.company}
-                </h4>
-                <p>{experience.skills.join(", ")}</p>
-              </VerticalTimelineElement>
-            );
-          })}
+              }
+              icon={
+                experience.isWorkplace ? (
+                  <HiBriefcase size={22} aria-hidden />
+                ) : (
+                  <HiAcademicCap size={22} aria-hidden />
+                )
+              }
+            >
+              <h2 className="vertical-timeline-element-title timeline-role">
+                {experience.designation}
+              </h2>
+              <h4 className="timeline-company">{experience.company}</h4>
+              <p className="timeline-skills">{experience.skills.join(" · ")}</p>
+            </VerticalTimelineElement>
+          ))}
         </VerticalTimeline>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

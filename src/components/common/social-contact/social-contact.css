@@ -1,20 +1,44 @@
 .social-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.social-icon-div {
-    padding: 6px;
-    cursor: pointer;
-    margin: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
 }
 
-.social-icons {
-    height: 40px;
+.social-link {
+  text-decoration: none;
+}
+
+.social-icon-div {
+  padding: 14px;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social-icon-div:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow);
+  background: var(--bg-card-hover);
+}
+
+.social-icon {
+  height: 28px;
+  width: 28px;
+  color: var(--brand, var(--text-primary));
+  transition: color var(--transition);
 }
 
 @media only screen and (max-width: 720px) {
-    .social-icons{
-        height: 32px;
-    }
+  .social-icon {
+    height: 24px;
+    width: 24px;
+  }
 }

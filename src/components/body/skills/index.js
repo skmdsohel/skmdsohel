@@ -1,30 +1,42 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Separator from "../../common/separator/index";
 import "./skills.css";
-import {SkillsData} from "../../data/skills";
+import { SkillsData } from "../../data/skills";
 import SkillCard from "./skill-card";
-function Skills() {
-  const data = SkillsData;
+import AnimatedSection from "../../common/AnimatedSection";
+
+function SkillsSection({ group, index }) {
   return (
-    <div className="skills">
+    <motion.div
+      className="skills-section"
+      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
+      <label className="skills-section-title">{group.type}</label>
+      <div className="skills-list">
+        {group.list.map((skill, skillIndex) => (
+          <SkillCard key={skill.name} skill={skill} index={skillIndex} />
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+function Skills() {
+  return (
+    <AnimatedSection className="skills">
       <Separator />
-    <label className="section-title">Skills</label>
-    <div className="skills-container">
-      {data.map((item, index) => {
-        return (
-          <div key={index} className="skills-section">
-            <label className="skills-section-title">{item.type}</label>
-            <div className="skills-list">
-              {item.list.map((skill, index) => {
-                return <SkillCard key={index} skill={skill} />;
-              })}
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  </div>
- );
+      <label className="section-title">Skills</label>
+      <div className="skills-container">
+        {SkillsData.map((group, index) => (
+          <SkillsSection key={group.type} group={group} index={index} />
+        ))}
+      </div>
+    </AnimatedSection>
+  );
 }
 
 export default Skills;

@@ -1,27 +1,28 @@
-html {
-    scroll-behavior: smooth;
-}
-.home{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
+.home {
+  display: flex;
+  flex-direction: column;
+  width: min(1120px, 88%);
+  margin: auto;
+  position: relative;
 }
 
-.sticky-header{
-  background-color: white;
-  position: sticky; 
+.sticky-header {
+  position: sticky;
   z-index: 100;
   top: 0;
+  padding: 8px 0;
+  transition: var(--transition);
 }
 
 @media only screen and (max-width: 1024px) {
   .home {
-    width: 90%;
+    width: min(1120px, 92%);
+  }
 }
-}
+
 @media only screen and (max-width: 512px) {
   .home {
     width: 100%;
+    padding: 0 12px;
   }
 }
