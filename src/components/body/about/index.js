@@ -37,9 +37,11 @@ function About() {
             <span className="info-name">Mohammad Sohel</span>
           </motion.div>
           <motion.p variants={item} className="about-tagline">
-            I turn designs into delightful digital experiences — focused on
-            polished UI, performance, and shipping products that feel great to
-            use.
+            I build software, automate infrastructure, and engineer systems that scale.
+
+            A software engineer with 5+ years of experience across full-stack development, cloud infrastructure, DevOps, and reliability engineering. I enjoy connecting the dots between code, infrastructure, and automation to build efficient, resilient, and scalable systems.
+
+            From crafting web applications and APIs to orchestrating containers, automating deployments, and solving production challenges — I turn complex engineering problems into practical solutions.
           </motion.p>
           <motion.div variants={item}>
             <a
